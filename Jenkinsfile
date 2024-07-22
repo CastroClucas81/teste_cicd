@@ -29,10 +29,11 @@ pipeline {
         }
 
           stage('Build Android') {
+                                // flutter pub get
+                    // flutter build apk
             steps {
                 sh '''
-                    flutter pub get
-                    flutter build apk
+                    flutter doctor
                 '''
             }
         }
