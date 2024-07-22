@@ -31,9 +31,7 @@ pipeline {
           stage('Build Android') {
             steps {
                 sh '''
-                    flutter pub cache repair
-                    flutter build apk --release
-
+                    flutter build apk --release -vv 
                 '''
             }
         }
