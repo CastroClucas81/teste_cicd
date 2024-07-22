@@ -31,7 +31,7 @@ pipeline {
           stage('Build Android') {
             steps {
                 sh '''
-                    flutter build apk --release -vv 
+                    flutter build apk
                 '''
             }
         }
