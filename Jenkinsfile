@@ -23,13 +23,13 @@ pipeline {
 
         stage('Tests') {
             steps {
-                bat "flutter test" 
+                sh "flutter test" 
             }
         }
 
           stage('Build') {
             steps {
-                bat 'flutter build apk --debug'
+                sh 'flutter build apk --debug'
             }
         }
     }
