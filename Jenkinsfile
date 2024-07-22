@@ -20,7 +20,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "${env.PATH}"
-                sh "flutter pub get" 
+                sh "git --version" 
             }
         }
 
