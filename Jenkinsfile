@@ -31,11 +31,14 @@ pipeline {
           stage('Build Android') {
             steps {
                 sh '''
-                    flutter build apk --release
+                    ./android
+                    ./gradlew clean
                 '''
             }
         }
     }
+
+                    //  flutter build apk --release
 
     post {
         always {
