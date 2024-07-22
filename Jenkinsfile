@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo "${env.PATH}"
                 sh "git config --global --add safe.directory '*'"
-                sh "flutter doctor" 
+                sh "flutter doctor -v" 
                 sh "flutter pub get"
             }
         }
