@@ -31,7 +31,7 @@ pipeline {
             steps {
                 bat 'flutter clean'
                 bat 'flutter pub get'
-                bat 'flutter build apk --debug --verbose'
+                bat 'flutter build apk --debug'
             }
         }
     }
