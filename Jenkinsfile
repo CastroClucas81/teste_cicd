@@ -2,8 +2,9 @@ pipeline {
     agent any
 
     environment {
+        ANDROID_HOME = "C:\\Users\\Usuario\\AppData\\Local\\Android\\Sdk"
         FLUTTER_PATH = "C:\\Users\\Usuario\\.puro\\envs\\stable\\flutter\\bin"
-        PATH = "${FLUTTER_PATH};${env.PATH}"
+        PATH = "${FLUTTER_PATH};${ANDROID_HOME};${env.PATH}"
     }
 
     stages {
