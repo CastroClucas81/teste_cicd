@@ -3,9 +3,8 @@ pipeline {
 
     environment {
         ANDROID_HOME = "C:\\Users\\Usuario\\AppData\\Local\\Android\\Sdk"
-        JAVA_HOME = "C:\\Program Files\\Zulu\\zulu-11"
         FLUTTER_PATH = "C:\\Users\\Usuario\\.puro\\envs\\stable\\flutter\\bin"
-        PATH = "${FLUTTER_PATH};${ANDROID_HOME};${JAVA_HOME};${env.PATH}"
+        PATH = "${FLUTTER_PATH};${ANDROID_HOME};${env.PATH}"
     }
 
     stages {
@@ -28,9 +27,13 @@ pipeline {
             }
         }
 
-          stage('Build') {
+          stage('Build Android') {
             steps {
-                sh 'flutter build apk'
+                // sh 'flutter build apk'
+                sh '''
+                    cd ./android
+                    ./gradlew build --info
+                '''
             }
         }
     }
