@@ -14,14 +14,9 @@ pipeline {
         }
 
         stage('Checkout') {
-            // steps {
-            //     echo "${env.PATH}"
-            //     bat "flutter --version" 
-            // }
-             steps {
-                dir("${env.FLUTTER_PATH}") {
-                    bat "flutter --version"
-                }
+            steps {
+                echo "${env.PATH}"
+                bat "flutter --version" 
             }
         }
     }
