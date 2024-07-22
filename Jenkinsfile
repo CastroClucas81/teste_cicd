@@ -30,7 +30,7 @@ pipeline {
           stage('Build') {
             steps {
                 bat 'flutter clean'
-                bat 'flutter build apk --release --stacktrace'
+                bat 'flutter build apk --release'
             }
         }
     }
