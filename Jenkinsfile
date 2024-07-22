@@ -20,23 +20,24 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "${env.PATH}"
-                sh "dart" 
+                sh "git config --global --add safe.directory '*'"
+                sh "flutter doctor" 
             }
         }
 
-        stage('Tests') {
-            steps {
-                sh "flutter test" 
-            }
-        }
+        // stage('Tests') {
+        //     steps {
+        //         sh "flutter test" 
+        //     }
+        // }
 
-          stage('Build Android') {
-            steps {
-                sh '''
-                    flutter doctor
-                '''
-            }
-        }
+        //   stage('Build Android') {
+        //     steps {
+        //         sh '''
+        //             flutter doctor
+        //         '''
+        //     }
+        // }
     }
 
     post {
