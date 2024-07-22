@@ -29,7 +29,7 @@ pipeline {
 
           stage('Build') {
             steps {
-                sh 'flutter build apk --debug'
+                sh 'flutter build apk'
             }
         }
     }
