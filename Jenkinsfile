@@ -32,7 +32,7 @@ pipeline {
             steps {
                 sh '''
                     cd ./android
-                    ./gradlew clearn build
+                    ./gradlew clean build
                     flutter build apk
                 '''
             }
