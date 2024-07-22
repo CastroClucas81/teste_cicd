@@ -19,8 +19,8 @@ pipeline {
             //     bat "flutter --version" 
             // }
              steps {
-                dir('C:\\Users\\Usuario\\.puro\\envs\\stable\\flutter\\bin') {
-                    bat 'flutter --version'
+                dir("${env.FLUTTER_PATH}") {
+                    bat "flutter --version"
                 }
             }
         }
