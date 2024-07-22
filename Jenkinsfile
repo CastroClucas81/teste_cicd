@@ -29,7 +29,11 @@ pipeline {
 
           stage('Build Android') {
             steps {
-                sh 'flutter build apk --verbose'
+                sh '''
+                    flutter clean
+                    flutter build apk --release --verbose
+
+                '''
             }
         }
     }
