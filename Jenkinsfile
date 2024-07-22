@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        FLUTTER_PATH = 'C:\\Users\\Usuario\\.puro\\envs\\stable\\flutter\\bin'
-        PATH = '${FLUTTER_PATH};${env.PATH}'
+        FLUTTER_PATH = "C:\\Users\\Usuario\\.puro\\envs\\stable\\flutter\\bin"
+        PATH = "${FLUTTER_PATH};${env.PATH}"
     }
 
     stages {
@@ -15,8 +15,8 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                echo '${env.PATH}'
-                bat 'git --version' 
+                echo "${env.PATH}"
+                bat "git --version" 
             }
         }
     }
