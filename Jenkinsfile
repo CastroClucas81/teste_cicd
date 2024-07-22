@@ -9,12 +9,13 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/CastroClucas81/teste_cicd.git'
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/CastroClucas81/teste_cicd.git']]])
             }
         }
 
         stage('Checkout') {
             steps {
+                echo '${env.PATH}'
                 bat 'flutter' 
             }
         }
