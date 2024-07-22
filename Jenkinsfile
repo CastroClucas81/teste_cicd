@@ -2,9 +2,6 @@ pipeline {
     agent any
 
     environment {
-        // FLUTTER_HOME = "C:\\Users\\Usuario\\.puro\\envs\\stable\\flutter"
-        // FLUTTER_HOME = "C:\\Windows\\System32\\config\\systemprofile\\.puro\\envs\\stable\\flutter"
-        // PURO = "C:\\Windows\\System32\\config\\systemprofile\\.puro\\envs\\stable\\flutter\\bin"
         ANDROID_HOME = "C:\\Users\\Usuario\\AppData\\Local\\Android\\Sdk"
         PATH = "${ANDROID_HOME};${env.PATH}"
     }
@@ -34,6 +31,8 @@ pipeline {
             steps {
                 sh '''
                     flutter pub get
+                    ./android 
+                    ./gradlew dependencies
                     flutter build apk --release
                 '''
             }
