@@ -16,7 +16,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "${env.PATH}"
-                bat "flutter --version" 
+                bat "flutter doctor" 
             }
         }
     }
