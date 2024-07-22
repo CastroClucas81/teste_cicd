@@ -31,8 +31,8 @@ pipeline {
           stage('Build Android') {
             steps {
                 sh '''
-                    cd android
-                    ./gradlew clean
+                   flutter clean
+                   flutter build apk
                 '''
             }
         }
