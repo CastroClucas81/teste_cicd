@@ -5,7 +5,7 @@ pipeline {
         ANDROID_HOME = "C:\\Users\\Usuario\\AppData\\Local\\Android\\Sdk"
         JAVA_HOME = "C:\\Program Files\\Zulu\\zulu-11"
         FLUTTER_PATH = "C:\\Users\\Usuario\\.puro\\envs\\stable\\flutter\\bin"
-        PATH = "${FLUTTER_PATH};${ANDROID_HOME};${env.PATH}"
+        PATH = "${FLUTTER_PATH};${ANDROID_HOME};${JAVA_HOME};${env.PATH}"
     }
 
     stages {
