@@ -29,11 +29,7 @@ pipeline {
 
           stage('Build Android') {
             steps {
-                // sh 'flutter build apk'
-                sh '''
-                    cd ./android
-                    ./gradlew build --info
-                '''
+                sh 'flutter build apk --verbose'
             }
         }
     }
