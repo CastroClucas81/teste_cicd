@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                bat 'git --version' 
+                bat 'flutter --version' 
             }
         }
     }
