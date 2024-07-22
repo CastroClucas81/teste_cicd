@@ -6,7 +6,7 @@ pipeline {
         // FLUTTER_HOME = "C:\\Windows\\System32\\config\\systemprofile\\.puro\\envs\\stable\\flutter"
         // PURO = "C:\\Windows\\System32\\config\\systemprofile\\.puro\\envs\\stable\\flutter\\bin"
         ANDROID_HOME = "C:\\Users\\Usuario\\AppData\\Local\\Android\\Sdk"
-        FLUTTER_PATH = "C:\\src\\flutter\\bin"
+        FLUTTER_PATH = "C:\\src\\flutter;C:\\src\\flutter\\bin"
         PATH = "${FLUTTER_PATH};${ANDROID_HOME};${env.PATH}"
     }
 
