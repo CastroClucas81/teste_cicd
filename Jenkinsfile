@@ -4,9 +4,8 @@ pipeline {
     environment {
         ANDROID_HOME = "C:\\Users\\Usuario\\AppData\\Local\\Android\\Sdk"
         FLUTTER_HOME = "C:\\Users\\Usuario\\.puro\\envs\\stable\\flutter"
-        FLUTTER_BATH = "C:\\Users\\Usuario\\.puro\\envs\\default\\flutter\\bin\\flutter.bat"
         FLUTTER_PATH = "${FLUTTER_HOME}\\bin"
-        PATH = "${FLUTTER_HOME};${FLUTTER_PATH};${FLUTTER_BATH};${ANDROID_HOME};${env.PATH}"
+        PATH = "${FLUTTER_HOME};${FLUTTER_PATH};${ANDROID_HOME};${env.PATH}"
     }
 
     stages {
@@ -32,6 +31,8 @@ pipeline {
           stage('Build Android') {
             steps {
                 sh '''
+                    cd ./android
+                    ./gradlew clearn build
                     flutter build apk
                 '''
             }
