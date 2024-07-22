@@ -29,7 +29,6 @@ pipeline {
 
           stage('Build') {
             steps {
-                bat 'flutter clean'
                 bat 'flutter build apk --release'
             }
         }
