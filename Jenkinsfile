@@ -31,8 +31,7 @@ pipeline {
             steps {
                 sh '''
                     flutter pub get
-                    ./android 
-                    ./gradlew dependencies
+                    flutter clean
                     flutter build apk --release
                 '''
             }
