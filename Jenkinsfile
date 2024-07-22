@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+        FLUTTER_PATH = "C:\\Users\\Usuario\\.puro\\envs\\stable\\flutter\\bin"
+        PATH = "${FLUTTER_PATH};${env.PATH}"
+    }
+
     stages {
         stage('Clone Repository') {
             steps {
@@ -15,9 +20,15 @@ pipeline {
             }
         }
 
-        stage('Build APK') {
+        stage('Tests') {
             steps {
-                bat "flutter build apk"
+                bat "flutter test" 
+            }
+        }
+
+          stage('Build') {
+            steps {
+                bat "flutter build apk" 
             }
         }
     }
