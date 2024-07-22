@@ -4,8 +4,9 @@ pipeline {
     environment {
         ANDROID_HOME = "C:\\Users\\Usuario\\AppData\\Local\\Android\\Sdk"
         FLUTTER_HOME = "C:\\Users\\Usuario\\.puro\\envs\\stable\\flutter"
+        PURO = "C:\\Windows\\System32\\config\\systemprofile\\.puro\\envs\\stable\\flutter\\bin"
         FLUTTER_PATH = "${FLUTTER_HOME}\\bin"
-        PATH = "${FLUTTER_HOME};${FLUTTER_PATH};${ANDROID_HOME};${env.PATH}"
+        PATH = "${FLUTTER_HOME};${FLUTTER_PATH};${ANDROID_HOME};${PURO};${env.PATH}"
     }
 
     stages {
