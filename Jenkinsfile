@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/seu_usuario/seu_repositorio.git'
+                git 'https://github.com/CastroClucas81/teste_cicd.git'
             }
         }
 
