@@ -29,9 +29,7 @@ pipeline {
 
           stage('Build') {
             steps {
-                bat 'flutter clean'
-                bat 'flutter pub get'
-                bat 'flutter build apk --debug'
+                bat 'flutter build apk'
             }
         }
     }
