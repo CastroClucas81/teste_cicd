@@ -31,7 +31,7 @@ pipeline {
             steps {
                 sh '''
                     flutter pub get
-                    flutter build apk --debug
+                    flutter build apk --release
                 '''
             }
         }
