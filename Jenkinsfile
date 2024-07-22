@@ -2,13 +2,12 @@ pipeline {
     agent any
 
     environment {
-        ANDROID_HOME = "C:\\Users\\Usuario\\AppData\\Local\\Android\\Sdk"
         // FLUTTER_HOME = "C:\\Users\\Usuario\\.puro\\envs\\stable\\flutter"
-        FLUTTER_HOME = "C:\\Windows\\System32\\config\\systemprofile\\.puro\\envs\\stable\\flutter"
+        // FLUTTER_HOME = "C:\\Windows\\System32\\config\\systemprofile\\.puro\\envs\\stable\\flutter"
         // PURO = "C:\\Windows\\System32\\config\\systemprofile\\.puro\\envs\\stable\\flutter\\bin"
-        FLUTTER_PATH = "${FLUTTER_HOME}\\bin"
-        PATH = "${ANDROID_HOME};${FLUTTER_HOME}${env.PATH}"
-        // PATH = "${FLUTTER_HOME};${FLUTTER_PATH};${ANDROID_HOME};${PURO};${env.PATH}"
+        ANDROID_HOME = "C:\\Users\\Usuario\\AppData\\Local\\Android\\Sdk"
+        FLUTTER_PATH = "C:\\src\\flutter\\bin"
+        PATH = "${FLUTTER_PATH};${ANDROID_HOME};${env.PATH}"
     }
 
     stages {
@@ -32,8 +31,6 @@ pipeline {
         }
 
           stage('Build Android') {
-                                // flutter pub get
-                    // flutter build apk
             steps {
                 sh '''
                     flutter doctor
