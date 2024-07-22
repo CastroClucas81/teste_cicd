@@ -30,13 +30,13 @@ pipeline {
             }
         }
 
-        //   stage('Build Android') {
-        //     steps {
-        //         sh '''
-        //             flutter doctor
-        //         '''
-        //     }
-        // }
+          stage('Build Android') {
+            steps {
+                sh '''
+                    flutter build apk
+                '''
+            }
+        }
     }
 
     post {
