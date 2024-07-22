@@ -24,11 +24,11 @@ pipeline {
             }
         }
 
-        // stage('Tests') {
-        //     steps {
-        //         sh "flutter test" 
-        //     }
-        // }
+        stage('Tests') {
+            steps {
+                sh "flutter test" 
+            }
+        }
 
         //   stage('Build Android') {
         //     steps {
