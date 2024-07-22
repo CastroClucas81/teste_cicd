@@ -18,6 +18,7 @@ pipeline {
                 echo "${env.PATH}"
                 sh "git config --global --add safe.directory '*'"
                 sh "flutter doctor" 
+                sh "flutter pub get"
             }
         }
 
@@ -30,7 +31,6 @@ pipeline {
           stage('Build Android') {
             steps {
                 sh '''
-                    flutter pub get
                     flutter build apk --release
                 '''
             }
@@ -40,6 +40,7 @@ pipeline {
     post {
         always {
             echo 'Pipeline finalizada.'
+            cleanWs()
         }
         success {
             echo 'Build foi bem-sucedido!'
