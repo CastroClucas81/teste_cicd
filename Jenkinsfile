@@ -29,8 +29,21 @@ pipeline {
 
           stage('Build') {
             steps {
-                bat "flutter build apk" 
+                bat 'flutter clean'
+                bat 'flutter build apk --release --stacktrace'
             }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline finalizada.'
+        }
+        success {
+            echo 'Build foi bem-sucedido!'
+        }
+        failure {
+            echo 'Build falhou.'
         }
     }
 }
