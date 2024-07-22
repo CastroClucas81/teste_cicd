@@ -31,7 +31,7 @@ pipeline {
           stage('Build Android') {
             steps {
                 sh '''
-                    cd ./android
+                    cd android
                     ./gradlew clean
                 '''
             }
