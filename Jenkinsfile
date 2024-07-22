@@ -7,9 +7,15 @@ pipeline {
     }
 
     stages {
+        stage('Clone Repository') {
+            steps {
+                git 'https://github.com/seu_usuario/seu_repositorio.git'
+            }
+        }
+
         stage('Checkout') {
             steps {
-                bat 'flutter --version' 
+                bat 'flutter' 
             }
         }
     }
