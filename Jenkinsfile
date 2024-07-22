@@ -16,7 +16,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo '${env.PATH}'
-                sh 'git --version' 
+                bat 'git --version' 
             }
         }
     }
