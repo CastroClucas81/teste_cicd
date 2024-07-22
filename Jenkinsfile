@@ -17,7 +17,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "${env.PATH}"
-                bat "flutter pub get" 
+                sh "flutter pub get" 
             }
         }
 
