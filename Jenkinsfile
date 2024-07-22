@@ -29,7 +29,7 @@ pipeline {
 
           stage('Build') {
             steps {
-                bat 'flutter build apk --release'
+                bat 'flutter build apk --debug --verbose'
             }
         }
     }
