@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         ANDROID_HOME = "C:\\Users\\Usuario\\AppData\\Local\\Android\\Sdk"
-        PATH = "${ANDROID_HOME};${env.PATH}"
+        PATH = "${ANDROID_HOME}\\tools;${ANDROID_HOME}\\platform-tools;${ANDROID_HOME};${env.PATH}"
     }
 
     stages {
