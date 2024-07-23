@@ -30,7 +30,7 @@ pipeline {
 
           stage('Build Android') {
             steps {
-                sh '''
+                bat '''
                    flutter clean
                    flutter build apk
                 '''
