@@ -31,18 +31,17 @@ pipeline {
           stage('Build Android') {
             steps {
                 sh '''
+                   #!/bin/sh
                    flutter build apk --release
                 '''
             }
         }
     }
 
-                    //  flutter build apk --release
-
     post {
         always {
             echo 'Pipeline finalizada.'
-            cleanWs()
+            cleanWs deleteDirs: true, notFailBuild: true
         }
         success {
             echo 'Build foi bem-sucedido!'
