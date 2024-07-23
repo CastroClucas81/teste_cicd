@@ -4,7 +4,7 @@ pipeline {
     environment {
         ANDROID_HOME = "C:\\Users\\Usuario\\AppData\\Local\\Android\\Sdk"
         GRADLE_HOME = "C:\\Windows\\System32\\config\\systemprofile\\.gradle\\caches\\transforms-3\\cf73cc8a4ba953430926b62a90018a2f\\transformed\\core-1.6.0\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
-        PATH = "${ANDROID_HOME};${GRADLE_HOME}${env.PATH}"
+        PATH = "${ANDROID_HOME};${GRADLE_HOME};${env.PATH}"
     }
 
     stages {
