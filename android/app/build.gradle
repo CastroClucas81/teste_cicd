@@ -52,6 +52,10 @@ android {
             crunchPngs false
         }
     }
+
+    aaptOptions {  
+        cruncherEnabled = false  
+    }
 }
 
 flutter {
