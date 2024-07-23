@@ -3,7 +3,8 @@ pipeline {
 
     environment {
         ANDROID_HOME = "C:\\Users\\Usuario\\AppData\\Local\\Android\\Sdk"
-        PATH = "${ANDROID_HOME}\\tools;${ANDROID_HOME}\\platform-tools;${ANDROID_HOME};${env.PATH}"
+        GRADLE_HOME = "C:\\Users\\Usuario\\AppData\\Local\\Gradle\\gradle-6.7\\bin"
+        PATH = "${ANDROID_HOME};${GRADLE_HOME}${env.PATH}"
     }
 
     stages {
@@ -31,7 +32,6 @@ pipeline {
           stage('Build Android') {
             steps {
                 sh '''
-                   #!/bin/sh
                    flutter build apk --release
                 '''
             }
